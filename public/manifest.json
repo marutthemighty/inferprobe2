@@ -1,0 +1,89 @@
+{
+  "_comment": "public/manifest.json - PWA Manifest for InferProbe",
+  
+  "name": "InferProbe - ML API Debugger",
+  "short_name": "InferProbe",
+  "description": "Privacy-first, offline-capable AI/ML API debugger and testing platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  
+  "categories": ["development", "utilities", "productivity"],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "New Scan",
+      "short_name": "Scan",
+      "description": "Start a new endpoint scan",
+      "url": "/?action=scan",
+      "icons": [
+        {
+          "src": "/icon-scan.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Upload Dataset",
+      "short_name": "Dataset",
+      "description": "Upload and scan a dataset",
+      "url": "/?action=upload",
+      "icons": [
+        {
+          "src": "/icon-upload.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        {
+          "name": "dataset",
+          "accept": ["text/csv", "application/json", "image/*"]
+        }
+      ]
+    }
+  },
+  
+  "prefer_related_applications": false
+}
