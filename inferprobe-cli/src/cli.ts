@@ -1,5 +1,5 @@
-# inferprobe-cli/src/cli.ts
-# Main CLI entry point
+// inferprobe-cli/src/cli.ts
+// Main CLI entry point
 
 #!/usr/bin/env node
 
