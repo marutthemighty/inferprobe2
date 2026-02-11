@@ -1,7 +1,7 @@
+#!/usr/bin/env node
+
 // inferprobe-cli/src/cli.ts
 // Main CLI entry point
-
-#!/usr/bin/env node
 
 import { Command } from 'commander';
 import chalk from 'chalk';
