@@ -1,11 +1,17 @@
 declare module 'ora' {
-  type OraOptions = { text?: string; spinner?: string };
+  interface OraOptions {
+    text?: string;
+    spinner?: string;
+  }
+  
   interface Ora {
     start(text?: string): this;
-    succeed(): this;
-    fail(): this;
+    succeed(text?: string): this;
+    fail(text?: string): this;
     stop(): this;
+    text: string;
   }
-  function ora(options?: OraOptions): Ora;
+  
+  function ora(options?: string | OraOptions): Ora;
   export default ora;
 }
